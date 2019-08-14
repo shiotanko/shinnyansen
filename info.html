@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>お問い合わせー新猫線ー</title>
+    <link rel="stylesheet" href="shinnyansen.css">
+    <link rel="shortcut icon" href="image/logo.ico">
+</head>
+<body id="info">
+
+    <!-- トップページへ戻るための目印 -->
+    <a name="info-top"></a>
+
+    <!-- メニュー -->
+    <header>
+        <a href="top.html"><img src="image/textlogo@2x.png" ></a>
+        <ul class="top-menu">
+            <li>新猫線とは？</li>
+            <li>メンバー</li>
+            <li>バックナンバー</li>
+            <li>募集</li>
+            <li>お問い合わせ</li>
+        </ul>
+    </header>
+    <main>
+        <div class="info-back"></div>
+        <div class="info-ex">
+            <img src="image/info@2x.jpg" alt="お問合せ">
+            <form action="after-info.html" method="post">
+                <p>お名前</p>
+                <input type="text" name="name">
+                <p>メールアドレス</p>
+                <input type="text" name="mail">
+                <p>電話番号</p>
+                <input type="text" name="tell1">
+                <input type="text" name="tell2">
+                <input type="text" name="tell3">
+                <p>お問合せ内容</p>
+                <input type="radio" name="info" value="gekidan">劇団について
+                <input type="radio" name="info" value="recrute">採用について
+                <input type="radio" name="info" value="other">その他
+                <p>メッセージ</p>
+                <textarea name="massege" id="massege" cols="80" rows="10"></textarea>
+                <p><input type="submit" value="送信" href="after-info.html"></p>
+            </form>
+        </div>
+        <a href="#info-top">＞＞TOPへ戻る</a>
+    </main>
+    <footer>
+        <p>(c)shinnyansen</p>
+    </footer>
+</body>
+</html>
