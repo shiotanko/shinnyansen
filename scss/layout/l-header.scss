@@ -1,0 +1,28 @@
+header{
+
+.menu-wrap{
+    display:flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+
+.header-logo{
+    width:240px;
+    height:42px;
+    margin:10px;
+}
+
+ul{
+    display:block;
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    display: block;
+    margin:10px 20px 10px 25px;
+    padding: 10px;
+    font-size:12px;
+}
+
+}

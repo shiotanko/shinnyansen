@@ -1,4 +1,5 @@
 /*! reset.scss Copyright 2014@Tomohiro IKEDA */
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+1p|Sawarabi+Mincho&display=swap");
 html, body, div,
 h1, h2, h3, h4, h5, h6,
 p, ul, ol, dl, dt, dd,
@@ -56,3 +57,29 @@ table {
 img {
   border: none;
   vertical-align: middle; }
+
+header .menu-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+header .header-logo {
+  width: 240px;
+  height: 42px;
+  margin: 10px; }
+
+header ul {
+  display: block;
+  display: flex;
+  flex-direction: row; }
+
+header li {
+  display: block;
+  margin: 10px 20px 10px 25px;
+  padding: 10px;
+  font-size: 12px; }
+
+body {
+  font-family: 'M PLUS 1p';
+  background-color: #FFFDED;
+  text-align: center; }
