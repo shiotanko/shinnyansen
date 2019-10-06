@@ -1,32 +1,45 @@
 // トップページ　新猫線とは？説明
-.top-wrap1{
+
+//斜めの背景（黄色）
+.top-wrap1{     
     background-color: #FAE67D;
     width:100%;
     height:250px;
-    transform:skew(0deg, -10deg);
+    transform:skew(0deg, -10deg);//傾斜
     position: relative;
     z-index: 3;
     
+    //「劇団　新猫線とは」ロゴ
     img{
         width:250px;
         height:85px;
-        transform:skew(0deg, 10deg);
+        transform:skew(0deg, 10deg);//傾斜
+        margin-top:20px;
     }
-
-    description__coment{
+    
+    //劇団紹介文
+    .description__coment{
         display: block;
         width:800px;
-        text-align: left;
-        padding-top:60px;
+        text-align: center;
+        margin-top:15px;
+        margin-left:25%;
+        margin-right:20%;
+        transform: translate(0, 0);
+        opacity: 0;
     }
+
+    .description__coment.active{
+        transition: all 1s;
+        transform: translate(-50px, 0);
+        opacity: 1;
+    }
+    
+
    
-    .more-link {
-        display: block;
-        padding:15px 0px;
-    }
 }
 
-// トップページ　バックナンバー・メンバー紹介・公演情報
+// バックナンバー・メンバー紹介・公演情報を囲む青い背景
 .top-wrap2{
     background-color:#C2E5F9;
     width:100%;
@@ -37,7 +50,7 @@
     overflow: hidden;
     z-index: 2;
 
-    //  作品詳細
+    //  バックナンバーのロゴ
     .topbacknumber-logo{
         width:200px;
         height:65px;
@@ -48,48 +61,57 @@
         z-index: 2;
     }
 
+    //  バックナンバーを囲む白い背景
     .top-backnumber__wrap{
-        width:423px;
+        width:410px;
         height: 500px;
         background-color:#FFFDED;
-        margin:29% 30% 0 20% ;
+        margin:29% 20% 0 20% ;
         transform:skew(0deg, -20deg);
         position: relative;
         z-index: 1;
-        
-        
     }
 
+   
+
+    //スクロールする範囲
     .top-backnumber__scroll{
         height:550px;
         width:420px;
         overflow:scroll;
         transform:skew(0deg, 10deg);
         position: absolute;
-            top:30px
-            
+            top:30px ;
+        opacity:0;
         }
 
+    .top-backnumber__scroll.active{
+        transition: all 1s;
+        transform: translate(50px, 0);
+            opacity: 1;
+    }
 
+    //バックナンバー作品の説明文
     .top-backnumber__wrap2{
         z-index: 1;
         position: relative;
         display: block;
    
-        
-        
+        //作品画像
         img{
             margin-top:20px;
         }
 
+        //作品タイトル
         .top-backnumber__wrap__tile{
             font-size:20px;
         }
 
     }
 
+    //バックナンバー背景の下部分
     .wrap__after{
-        width:423px;
+        width:410px;
         height: 230px;
         background-color:#FFFDED;
         margin:29% 30% 0 20% ;
@@ -103,6 +125,8 @@
 
     // メンバー紹介
     .top-member{
+
+        //メンバー紹介ロゴ
         .topmember-logo{
             position: absolute;
             top:245px;
@@ -114,6 +138,7 @@
 
         }
 
+        //メンバー紹介を囲む白い背景
         .top-member__wrap{
             background-color:#FFFDED;
             width:410px;
@@ -158,61 +183,59 @@
     }
 }
 
-    .top-performance{
+.top-performance{
 
-        .top-performance-logo{
-            position: absolute;
-            top:630px;
-            right:530px;
-            transform:skew(10deg, -30deg);
-            widows: 140px;
-            height:60px;
+    .top-performance-logo{
+        position: absolute;
+        top:630px;
+        right:530px;
+        transform:skew(10deg, -30deg);
+        widows: 140px;
+        height:60px;
+    }
+
+    .top-performance-wrap{
+        background-color:#FFFDED;
+        width:410px;
+        height:300px;
+        position: absolute;
+        top:650px;
+        right:20%;
+        transform:skew(0deg, -20deg);
+    }
+
+    .top-performance-wrap:after{
+        content:"";
+        width:410px;
+        height: 200px;
+        background-color:#FFFDED;
+        margin:29% 30% 0 20% ;
+        transform:skew(0deg, 20deg);
+        position: absolute;
+        top:76px;
+        left:-20%;
+        display: block;
+        z-index:0;
+    }
+
+    .top-performance-wrap2{
+        
+        transform:skew(0deg, 10deg);
+        z-index: 1;
+        position: absolute;
+            top:40px;
+            right:40px;
+
+        .coment-title{
+            font-size: 20px;
+            margin-top:25px;
+            font-weight:bold;
+            text-align: left;
         }
+        
+    }
 
-        .top-performance-wrap{
-            background-color:#FFFDED;
-            width:410px;
-            height:300px;
-            position: absolute;
-            top:650px;
-            right:20%;
-            transform:skew(0deg, -20deg);
-        }
-
-        .top-performance-wrap:after{
-            content:"";
-            width:410px;
-            height: 200px;
-            background-color:#FFFDED;
-            margin:29% 30% 0 20% ;
-            transform:skew(0deg, 20deg);
-            position: absolute;
-            top:76px;
-            left:-20%;
-            display: block;
-            z-index:0;
-        }
-
-        .top-performance-wrap2{
-            
-            transform:skew(0deg, 10deg);
-            z-index: 1;
-            position: absolute;
-                top:40px;
-                right:40px;
-
-            .coment-title{
-                font-size: 20px;
-                margin-top:25px;
-                font-weight:bold;
-                text-align: left;
-            }
-            
-        }
-
-    }  
-    
-
+}  
 
 .top-wrap3{
     background-color:#c6dd72;
@@ -243,23 +266,18 @@
         color: #FFFDED;
         border-bottom: solid 4px #627295;
         border-radius: 3px;
-    
    }
-
    .top-recrute-link:active{
         -webkit-transform: translateY(4px);
         transform: translateY(4px);/*下に動く*/
-
    }
-   
-
 }
 
 .toppage a{
     display: block;
     position: relative;
-        top:-30px;
-        left:100px;
+    top:-30px;
+    left:100px;
     width:200px;
     font-size:20px;
 }
