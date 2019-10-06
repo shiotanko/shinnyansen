@@ -79,15 +79,17 @@
         height:550px;
         width:420px;
         overflow:scroll;
-        transform:skew(0deg, 10deg);
         position: absolute;
             top:30px ;
+            right:50px;
+        transform: skew(0deg, 10deg);
         opacity:0;
         }
 
     .top-backnumber__scroll.active{
+        position: absolute;
         transition: all 1s;
-        transform: translate(50px, 0);
+        transform: skew(0deg, 10deg)translate(50px, 0);
             opacity: 1;
     }
 
@@ -150,6 +152,16 @@
             
             .top-member__wrap2{
                 margin-top:60px;
+                position: absolute;
+                left:100px;
+                opacity: 0;
+            }
+
+            .top-member__wrap2.active{
+                // position: absolute;
+                transition: all 1s;
+                transform: translate(-50px, 0);
+                    opacity: 1;
             }
 
 
@@ -164,18 +176,15 @@
                 font-size: 20px;
                 font-weight:bold;
                 text-align: left;
-                position: relative;
-                left:50px;
-                top:-18px;
                 width:180px;
                 
             }
 
             .topmember__wrap__coment{
-                position: relative;
-                left:-20px;
-                top:5px;
-                margin-bottom:10px;
+               text-align: left;
+               position: relative;
+               top:5px;
+               left:20px;
             }
 
         }
@@ -219,21 +228,31 @@
     }
 
     .top-performance-wrap2{
-        
-        transform:skew(0deg, 10deg);
         z-index: 1;
         position: absolute;
             top:40px;
-            right:40px;
-
+            right:-20px;
+        opacity: 0;
+        transform: skew(0deg,10deg);
+    
         .coment-title{
             font-size: 20px;
             margin-top:25px;
             font-weight:bold;
             text-align: left;
-        }
-        
+        }   
     }
+
+    .top-performance-wrap2.active{
+        position: absolute;
+            top:40px;
+            right:-20px;
+        z-index: 1;
+        transition: all 1s;
+        transform: skew(0deg,10deg)translate(-50px, 0);
+        opacity: 1;
+    }
+
 
 }  
 
@@ -251,14 +270,22 @@
        height:60px;
        margin:20px;
    }
-   .coment{
+   .recrute-coment{
        line-height: 30px;
        font-size:15px;
+       position: absolute;
+            left:350px;
+        opacity: 0;
+   }
+
+   .recrute-coment.active{
+    transition: all 1s;
+    transform:translate(50px, 0);
+    opacity: 1;
    }
 
    .top-recrute-link{
        margin-top:20px;
-       display: block;
        display: inline-block;
         padding: 0.5em 1em;
         text-decoration: none;
@@ -266,11 +293,11 @@
         color: #FFFDED;
         border-bottom: solid 4px #627295;
         border-radius: 3px;
+        position: absolute;
+            top:220px;
+            left:600px;
    }
-   .top-recrute-link:active{
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px);/*下に動く*/
-   }
+   
 }
 
 .toppage a{

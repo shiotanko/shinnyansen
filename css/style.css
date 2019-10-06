@@ -167,13 +167,15 @@ body {
     height: 550px;
     width: 420px;
     overflow: scroll;
-    transform: skew(0deg, 10deg);
     position: absolute;
     top: 30px;
+    right: 50px;
+    transform: skew(0deg, 10deg);
     opacity: 0; }
   .top-wrap2 .top-backnumber__scroll.active {
+    position: absolute;
     transition: all 1s;
-    transform: translate(50px, 0);
+    transform: skew(0deg, 10deg) translate(50px, 0);
     opacity: 1; }
   .top-wrap2 .top-backnumber__wrap2 {
     z-index: 1;
@@ -209,7 +211,14 @@ body {
     right: 20%;
     transform: skew(0deg, -20deg); }
     .top-wrap2 .top-member .top-member__wrap .top-member__wrap2 {
-      margin-top: 60px; }
+      margin-top: 60px;
+      position: absolute;
+      left: 100px;
+      opacity: 0; }
+    .top-wrap2 .top-member .top-member__wrap .top-member__wrap2.active {
+      transition: all 1s;
+      transform: translate(-50px, 0);
+      opacity: 1; }
     .top-wrap2 .top-member .top-member__wrap p {
       line-height: 30px;
       position: relative;
@@ -218,15 +227,12 @@ body {
       font-size: 20px;
       font-weight: bold;
       text-align: left;
-      position: relative;
-      left: 50px;
-      top: -18px;
       width: 180px; }
     .top-wrap2 .top-member .top-member__wrap .topmember__wrap__coment {
+      text-align: left;
       position: relative;
-      left: -20px;
       top: 5px;
-      margin-bottom: 10px; }
+      left: 20px; }
 
 .top-performance .top-performance-logo {
   position: absolute;
@@ -259,16 +265,26 @@ body {
   z-index: 0; }
 
 .top-performance .top-performance-wrap2 {
-  transform: skew(0deg, 10deg);
   z-index: 1;
   position: absolute;
   top: 40px;
-  right: 40px; }
+  right: -20px;
+  opacity: 0;
+  transform: skew(0deg, 10deg); }
   .top-performance .top-performance-wrap2 .coment-title {
     font-size: 20px;
     margin-top: 25px;
     font-weight: bold;
     text-align: left; }
+
+.top-performance .top-performance-wrap2.active {
+  position: absolute;
+  top: 40px;
+  right: -20px;
+  z-index: 1;
+  transition: all 1s;
+  transform: skew(0deg, 10deg) translate(-50px, 0);
+  opacity: 1; }
 
 .top-wrap3 {
   background-color: #c6dd72;
@@ -282,12 +298,18 @@ body {
   .top-wrap3 img {
     height: 60px;
     margin: 20px; }
-  .top-wrap3 .coment {
+  .top-wrap3 .recrute-coment {
     line-height: 30px;
-    font-size: 15px; }
+    font-size: 15px;
+    position: absolute;
+    left: 350px;
+    opacity: 0; }
+  .top-wrap3 .recrute-coment.active {
+    transition: all 1s;
+    transform: translate(50px, 0);
+    opacity: 1; }
   .top-wrap3 .top-recrute-link {
     margin-top: 20px;
-    display: block;
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -295,11 +317,10 @@ body {
     /*ボタン色*/
     color: #FFFDED;
     border-bottom: solid 4px #627295;
-    border-radius: 3px; }
-  .top-wrap3 .top-recrute-link:active {
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-    /*下に動く*/ }
+    border-radius: 3px;
+    position: absolute;
+    top: 220px;
+    left: 600px; }
 
 .toppage a {
   display: block;
